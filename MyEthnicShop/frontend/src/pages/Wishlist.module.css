@@ -1,0 +1,43 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: var(--color-primary);
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+/* Cards are now rendered using ProductCard component for consistent sizing and style */
+@media (max-width: 700px) {
+  .grid {
+    gap: 10px;
+  }
+  .card {
+    width: 46vw;
+    min-width: 160px;
+    padding: 10px 4px 10px 4px;
+  }
+  .img {
+    height: 120px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 8px 2vw;
+  }
+  .card {
+    width: 98vw;
+    min-width: 0;
+    padding: 8px 2px 8px 2px;
+  }
+  .img {
+    height: 90px;
+  }
+} 

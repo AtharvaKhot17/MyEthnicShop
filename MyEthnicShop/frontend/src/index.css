@@ -1,0 +1,163 @@
+/* Global CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --color-primary: #1a237e; /* deep blue */
+  --color-accent: #ff4081;  /* vibrant pink accent */
+  --color-bg: #f5f7fa;      /* soft gray background */
+  --color-surface: #fff;    /* white */
+  --color-text: #23272f;    /* deep blue-gray */
+  --color-secondary: #e3e7ef; /* pale blue-gray */
+  --color-header-bg: #f5f7fa; /* header background */
+  --color-divider: #ff4081; /* accent divider bar */
+  --color-button: #ff4081;
+  --color-button-hover: #c51162;
+  --color-badge: #ffe3ec;
+  --color-border: #e3e7ef;
+  --radius: 18px;
+  --shadow: 0 4px 16px rgba(26,35,126,0.08);
+  --max-width: 1200px;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 18px;
+  letter-spacing: 0.7px;
+  line-height: 1.18;
+}
+label, .filterLabel {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.04rem;
+  color: #444;
+  margin-bottom: 4px;
+  letter-spacing: 0.1px;
+}
+p, .product-info, .price, .brand, .rating, .discount {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.01rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--color-button);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 32px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+button:hover {
+  background: var(--color-button-hover);
+  box-shadow: 0 8px 32px rgba(215,38,96,0.13);
+}
+
+input, select, textarea {
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  outline: none;
+  background: #fff;
+  transition: border 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(215,38,96,0.10);
+  padding: 28px 18px 18px 18px;
+  margin: 16px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.22s, transform 0.22s;
+  cursor: pointer;
+  position: relative;
+}
+.card:hover {
+  box-shadow: 0 16px 48px rgba(215,38,96,0.13);
+  transform: translateY(-8px) scale(1.04);
+}
+
+section {
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+  margin-bottom: 32px;
+  padding: 32px 24px;
+}
+
+.divider {
+  width: 100%;
+  height: 8px;
+  background: var(--color-divider);
+  border-radius: 8px;
+  margin: 0 auto 18px auto;
+}
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 98vw;
+    padding: 24px 4vw;
+  }
+  section {
+    padding: 20px 8px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 12px 2vw;
+  }
+  section {
+    padding: 12px 2vw;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}

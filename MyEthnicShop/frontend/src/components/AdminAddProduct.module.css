@@ -1,0 +1,488 @@
+.multiSelectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  background: #f5f5f5;
+  color: #333;
+  border-radius: 16px;
+  padding: 6px 14px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1.5px solid #e0e0e0;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+}
+.pill.selected {
+  background: linear-gradient(90deg, #d72660 0%, #fbb1b1 100%);
+  color: #fff;
+  border: 1.5px solid #d72660;
+}
+.pillRemove {
+  margin-left: 8px;
+  font-size: 1.1em;
+  color: #fff;
+  background: #b71c4a;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.clearBtn {
+  background: #ffe3ec;
+  color: #d72660;
+  border: none;
+  border-radius: 14px;
+  padding: 6px 16px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-bottom: 4px;
+  transition: background 0.18s, color 0.18s;
+}
+.clearBtn:hover {
+  background: #fbb1b1;
+  color: #fff;
+} 
+.multiSelectDropdown {
+  position: relative;
+  margin-bottom: 12px;
+}
+.multiSelectInput {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: #fff;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  transition: border 0.18s;
+}
+.multiSelectInput:focus-within, .multiSelectInput:active {
+  border: 1.5px solid #d72660;
+}
+.multiSelectPlaceholder {
+  color: #aaa;
+  font-size: 1rem;
+}
+.dropdownArrow {
+  margin-left: auto;
+  color: #d72660;
+  font-size: 1.1em;
+  padding-left: 8px;
+}
+.multiSelectMenu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(215,38,96,0.10);
+  z-index: 10;
+  padding: 6px 0;
+  max-height: 180px;
+  overflow-y: auto;
+}
+.multiSelectOption {
+  padding: 8px 18px 8px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+}
+.multiSelectOption.selected {
+  background: #ffe3ec;
+  color: #d72660;
+  font-weight: 600;
+}
+.multiSelectOption:hover {
+  background: #fbb1b1;
+  color: #fff;
+}
+.multiSelectOption.clearAll {
+  color: #b71c4a;
+  font-weight: 600;
+  background: #fff0f3;
+  border-top: 1px solid #fbb1b1;
+  margin-top: 4px;
+}
+.checkmark {
+  margin-left: auto;
+  color: #d72660;
+  font-size: 1.1em;
+} 
+.adminAddProductForm {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(215,38,96,0.10);
+  max-width: 440px;
+  margin: 32px auto 24px auto;
+  padding: 36px 32px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.formTitle {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+  text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+.formDesc {
+  color: #888;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.formSection {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.formLabel {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2d1e2f;
+}
+.formInput, .styledSelect, textarea.formInput {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #faf9fa;
+  transition: border 0.18s, box-shadow 0.18s;
+}
+.formInput:focus, .styledSelect:focus, textarea.formInput:focus {
+  outline: none;
+  border: 1.5px solid #d72660;
+  box-shadow: 0 2px 8px rgba(215,38,96,0.08);
+}
+.styledSelectWrapper {
+  position: relative;
+  width: 100%;
+}
+.styledSelect {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #faf9fa;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px 38px 10px 14px;
+  font-size: 1rem;
+  width: 100%;
+  cursor: pointer;
+  font-family: 'Poppins', Arial, sans-serif;
+  transition: border 0.18s;
+}
+.selectArrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d72660;
+  font-size: 1.2em;
+  pointer-events: none;
+}
+.formError {
+  color: #e53935;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.formSuccess {
+  color: #4caf50;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.formSubmitBtn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 0;
+  background: linear-gradient(90deg, #d72660 0%, #fbb1b1 100%);
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.18rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(215,38,96,0.13);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  font-family: 'Poppins', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.formSubmitBtn:hover {
+  background: linear-gradient(90deg, #b71c4a 0%, #fbb1b1 100%);
+  box-shadow: 0 8px 32px rgba(215,38,96,0.18);
+  transform: scale(1.05);
+}
+@media (max-width: 600px) {
+  .adminAddProductForm {
+    padding: 16px 4vw;
+    max-width: 98vw;
+  }
+} 
+.adminAddProductFormV2 {
+  background: linear-gradient(135deg, #fff5fa 60%, #fbb1b1 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(215,38,96,0.13);
+  max-width: 540px;
+  margin: 40px auto 32px auto;
+  padding: 44px 36px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1.5px solid #fbb1b1;
+}
+.formGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 36px;
+}
+.formSection {
+  flex: 1 1 220px;
+  min-width: 220px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 14px;
+  padding: 12px 14px 8px 14px;
+  box-shadow: 0 2px 8px rgba(215,38,96,0.04);
+}
+.formSection.fullWidth {
+  flex-basis: 100%;
+  min-width: 0;
+}
+.formLabel {
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin-bottom: 7px;
+  color: #b71c4a;
+  letter-spacing: 0.2px;
+}
+.formInput, select.formInput, textarea.formInput {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 1.08rem;
+  margin-bottom: 2px;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #fff;
+  transition: border 0.18s, box-shadow 0.18s;
+  box-shadow: 0 1px 4px rgba(215,38,96,0.04);
+}
+.formInput:focus, select.formInput:focus, textarea.formInput:focus {
+  outline: none;
+  border: 1.5px solid #d72660;
+  box-shadow: 0 2px 12px rgba(215,38,96,0.10);
+}
+.customMultiSelect {
+  position: relative;
+  min-height: 48px;
+  background: #fff;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  transition: border 0.18s, box-shadow 0.18s;
+  margin-bottom: 2px;
+  box-shadow: 0 1px 4px rgba(215,38,96,0.04);
+}
+.customMultiSelect:focus-within, .customMultiSelect:active {
+  border: 1.5px solid #d72660;
+  box-shadow: 0 2px 12px rgba(215,38,96,0.10);
+}
+.customMultiSelectInput {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  min-height: 28px;
+}
+.multiSelectPlaceholder {
+  color: #bfa2b2;
+  font-size: 1.08rem;
+}
+.multiPill {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(90deg, #fbb1b1 0%, #fff5fa 100%);
+  color: #b71c4a;
+  border-radius: 16px;
+  padding: 7px 16px 7px 14px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid #fbb1b1;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  box-shadow: 0 1px 4px rgba(215,38,96,0.06);
+}
+.multiPillRemove {
+  margin-left: 10px;
+  font-size: 1.15em;
+  color: #fff;
+  background: #d72660;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 5px;
+  font-weight: 700;
+  box-shadow: 0 1px 4px rgba(215,38,96,0.10);
+}
+.multiPillRemove:hover {
+  background: #b71c4a;
+}
+.dropdownArrow {
+  margin-left: 10px;
+  color: #d72660;
+  font-size: 1.15em;
+}
+.customMultiSelectMenu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1.5px solid #fbb1b1;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(215,38,96,0.13);
+  z-index: 10;
+  padding: 8px 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.customMultiSelectOption {
+  padding: 10px 22px 10px 18px;
+  cursor: pointer;
+  font-size: 1.08rem;
+  color: #b71c4a;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+.customMultiSelectOption.selected {
+  background: #ffe3ec;
+  color: #d72660;
+  font-weight: 700;
+}
+.customMultiSelectOption:hover {
+  background: #fbb1b1;
+  color: #fff;
+}
+.customMultiSelectOption.clearAll {
+  color: #b71c4a;
+  font-weight: 700;
+  background: #fff0f3;
+  border-top: 1px solid #fbb1b1;
+  margin-top: 4px;
+}
+.checkmark {
+  margin-left: auto;
+  color: #d72660;
+  font-size: 1.15em;
+}
+.formError {
+  color: #e53935;
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+.formSuccess {
+  color: #4caf50;
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+.formSubmitBtn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 16px 0;
+  background: linear-gradient(90deg, #d72660 0%, #fbb1b1 100%);
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.22rem;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(215,38,96,0.13);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  font-family: 'Poppins', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  letter-spacing: 0.5px;
+}
+.formSubmitBtn:hover {
+  background: linear-gradient(90deg, #b71c4a 0%, #fbb1b1 100%);
+  box-shadow: 0 8px 32px rgba(215,38,96,0.18);
+  transform: scale(1.05);
+}
+@media (max-width: 900px) {
+  .formGrid {
+    flex-direction: column;
+    gap: 0;
+  }
+  .formSection {
+    min-width: 0;
+    margin-bottom: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .adminAddProductFormV2 {
+    padding: 10px 1vw;
+    max-width: 99vw;
+  }
+  .formGrid {
+    gap: 0;
+  }
+  .formSection {
+    padding: 8px 4px 4px 4px;
+  }
+} 

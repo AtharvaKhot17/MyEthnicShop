@@ -1,0 +1,108 @@
+.footer {
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 -4px 24px rgba(215,38,96,0.06);
+  margin-top: 48px;
+  padding: 48px 0 0 0;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px 32px 32px;
+}
+.col {
+  flex: 1 1 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 120px;
+}
+.colTitle {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.08rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+.link {
+  color: var(--color-text);
+  text-decoration: none;
+  opacity: 0.92;
+  font-size: 0.98rem;
+  margin-bottom: 2px;
+  transition: color 0.2s, opacity 0.2s;
+}
+.link:hover {
+  color: var(--color-primary);
+  opacity: 1;
+}
+.contactText {
+  font-size: 0.98rem;
+  opacity: 0.92;
+  line-height: 1.6;
+}
+.socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+.socialIcon {
+  color: var(--color-primary);
+  background: #fff5fa;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(215,38,96,0.08);
+}
+.socialIcon:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+.bottomRow {
+  border-top: 1.5px solid #fbb1b1;
+  margin-top: 0;
+  padding: 18px 0 12px 0;
+  text-align: center;
+  font-size: 0.98rem;
+  color: #888;
+  background: #fff5fa;
+  border-radius: 0 0 24px 24px;
+}
+@media (max-width: 900px) {
+  .topRow {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 12px 24px 12px;
+  }
+  .col {
+    min-width: 0;
+  }
+}
+@media (max-width: 600px) {
+  .footer {
+    padding: 24px 0 0 0;
+    border-radius: 12px 12px 0 0;
+  }
+  .topRow {
+    padding: 0 2vw 16px 2vw;
+    gap: 14px;
+  }
+  .colTitle {
+    font-size: 1rem;
+  }
+  .bottomRow {
+    font-size: 0.92rem;
+    padding: 10px 0 8px 0;
+    border-radius: 0 0 12px 12px;
+  }
+} 

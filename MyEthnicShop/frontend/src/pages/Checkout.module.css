@@ -1,0 +1,126 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 32px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+.checkoutForm {
+  flex: 2;
+  min-width: 320px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 24px;
+}
+.formTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: var(--color-primary);
+}
+.formGroup {
+  margin-bottom: 18px;
+}
+.label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+.input, .select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+.input:focus, .select:focus {
+  outline: 2px solid var(--color-primary);
+}
+.error {
+  color: var(--color-accent);
+  font-size: 0.97rem;
+  margin-top: 2px;
+}
+.summary {
+  flex: 1;
+  min-width: 260px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 20px;
+  margin-top: 8px;
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
+}
+.summaryTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--color-primary);
+}
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+.placeOrderBtn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #d72660 0%, #fbb1b1 100%);
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.18rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(215,38,96,0.13);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  font-family: 'Poppins', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.placeOrderBtn:hover {
+  background: linear-gradient(90deg, #b71c4a 0%, #fbb1b1 100%);
+  box-shadow: 0 8px 32px rgba(215,38,96,0.18);
+  transform: scale(1.05);
+}
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px 4vw;
+  }
+  .summary {
+    position: static;
+    margin-top: 16px;
+  }
+}
+.paymentSection {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 2px solid #f0f0f0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 8px 2vw;
+  }
+  .checkoutForm, .summary {
+    padding: 14px 6px;
+  }
+  .paymentSection {
+    margin-top: 24px;
+    padding-top: 24px;
+  }
+} 

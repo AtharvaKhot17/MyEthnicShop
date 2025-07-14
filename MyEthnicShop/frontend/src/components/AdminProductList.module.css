@@ -1,0 +1,126 @@
+.adminTableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(215,38,96,0.10);
+  margin: 32px 0 40px 0;
+  padding: 0 0 16px 0;
+}
+.adminTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 700px;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  font-size: 1.08rem;
+}
+.adminTable thead tr {
+  background: linear-gradient(90deg, #fff5fa 0%, #fbb1b1 100%);
+}
+.adminTable th, .adminTable td {
+  padding: 22px 28px 22px 18px;
+  text-align: left;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #2d1e2f;
+  border-bottom: 1.5px solid #f3e6e6;
+  max-width: 260px;
+  vertical-align: middle;
+}
+.adminTable th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: linear-gradient(90deg, #fff5fa 0%, #fbb1b1 100%);
+  font-size: 1.13rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  border-bottom: 2.5px solid #fbb1b1;
+}
+.adminTable tbody tr {
+  border-radius: 12px;
+  transition: background 0.18s, color 0.18s;
+}
+.adminTable tbody tr:nth-child(even) {
+  background: #fff5fa;
+}
+.adminTable tbody tr:nth-child(odd) {
+  background: #fff;
+}
+.adminTable tbody tr:hover {
+  background: #fbb1b1;
+  color: #fff;
+}
+.ellipsisCell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  display: block;
+}
+.adminTableBtn {
+  border: none;
+  background: #f5f5f5;
+  font-size: 0.98rem;
+  font-weight: 700;
+  padding: 7px 18px;
+  border-radius: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 1px 4px rgba(215,38,96,0.06);
+  display: inline-block;
+  min-width: 70px;
+}
+.editBtn {
+  color: #1976d2;
+  background: #e3f2fd;
+  border: 1.5px solid #e3f2fd;
+}
+.editBtn:hover {
+  background: #1976d2;
+  color: #fff;
+  border: 1.5px solid #1976d2;
+}
+.deleteBtn {
+  color: #d72660;
+  background: #ffe3ec;
+  border: 1.5px solid #ffe3ec;
+}
+.deleteBtn:hover {
+  background: #d72660;
+  color: #fff;
+  border: 1.5px solid #d72660;
+}
+@media (max-width: 1100px) {
+  .adminTable th, .adminTable td {
+    padding: 16px 8px 16px 8px;
+    font-size: 0.98rem;
+  }
+  .adminTable {
+    min-width: 420px;
+  }
+}
+@media (max-width: 700px) {
+  .adminTableWrapper {
+    padding: 0 0 4px 0;
+    border-radius: 10px;
+  }
+  .adminTable th, .adminTable td {
+    padding: 12px 4px 12px 4px;
+    font-size: 0.93rem;
+  }
+  .adminTable {
+    min-width: 320px;
+  }
+  .adminTableBtn {
+    min-width: 54px;
+    padding: 6px 8px;
+    font-size: 0.93rem;
+    margin-right: 4px;
+  }
+} 
