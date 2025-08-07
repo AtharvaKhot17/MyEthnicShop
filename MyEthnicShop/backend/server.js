@@ -16,7 +16,10 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ["https://my-ethnic-shop.vercel.app"],
+  credentials: true
+}));
 app.use(helmet());
 app.use(morgan('dev'));
 
