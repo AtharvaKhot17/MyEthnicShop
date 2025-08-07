@@ -61,9 +61,10 @@ function Header() {
               </button>
             </>
           ) : (
-            <NavLink to="/login" className={styles.iconBtn} title="Login">
-              <FaUserCircle size={28} />
-            </NavLink>
+            <>
+              <NavLink to="/login" className={styles.link} style={{ marginRight: '10px' }}>Login</NavLink>
+              <NavLink to="/register" className={styles.link}>Sign Up</NavLink>
+            </>
           )}
         </div>
       </div>

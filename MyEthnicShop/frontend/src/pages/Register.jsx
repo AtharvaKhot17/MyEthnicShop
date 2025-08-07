@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 function Register() {
   const { register, loading, error } = useAuth();
@@ -70,6 +71,9 @@ function Register() {
           {loading ? 'Registering...' : 'Register'}
         </motion.button>
       </form>
+      <p style={{ textAlign: 'center', marginTop: '1rem' }}>
+        Already have an account? <Link to="/login" style={{ color: '#d72660', textDecoration: 'none' }}>Login here</Link>
+      </p>
     </div>
   );
 }
